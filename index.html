@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #slide {
+        width: 1224px;
+        height: 600px;
+        position: relative;
+        transform: perspective(700px);
+        transform-style: preserve-3d;        
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slide"></div>
+
+    <script type="module">
+      import { Slide } from "./slide.js";
+      let arr = [
+        "img/5.png",
+        "img/4.png",
+        "img/3.png",
+        "img/2.png",
+        "img/1.png"
+      ];
+
+      new Slide({
+        el: '#slide',
+        speed: 5000, //大于2
+        arr: arr //img数组
+      });
+    </script>
+  </body>
+</html>
